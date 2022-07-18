@@ -1,6 +1,7 @@
 String title = "Wahoo!";
 float titleX, titleY, titleWidth, titleHeight;
 PFont titleFont;
+color purple=#D200FC, resetDefaultInk=#FFFFFF; // not nightMode friendly
 //
 //CANVAS
 size (500,600); //Portrait Mode, fits on my display
@@ -20,4 +21,6 @@ titleFont = createFont("Zapfino", 55); //Verify the font exists in Processing.JA
 rect(titleX, titleY, titleWidth, titleHeight);
 //
 //Repeated Executed Code
+fill(purple); //Ink, hexidecimal copied from Color Selector
 text(title, titleX, titleY, titleWidth, titleHeight);
+fill(resetDefaultInk);
