@@ -2,6 +2,7 @@ String title = "Wahoo!";
 float titleX, titleY, titleWidth, titleHeight;
 PFont titleFont;
 color purple=#D200FC, resetDefaultInk=#FFFFFF; // not nightMode friendly
+int titleSize;
 //
 //CANVAS
 size (500,600); //Portrait Mode, fits on my display
@@ -15,12 +16,17 @@ titleHeight = height;
 //Fonts rom OS (Operating System)
 String[] fontList = PFont.list(); //To list all fonts available on OS
 printArray(fontList); //For Listing all possible fonts to choose from, then createFont
-titleFont = createFont("Zapfino", 55); //Verify the font exists in Processing.JAVA
+titleFont = createFont("TimesNewRomanPSMT", 55); //Verify the font exists in Processing.JAVA
 // Tools / Create Font / Find font in list to verify / DO NOT PRESS "OK" (BUG)
 //
+//Layout our text space and typographical features
 rect(titleX, titleY, titleWidth, titleHeight);
 //
 //Repeated Executed Code
 fill(purple); //Ink, hexidecimal copied from Color Selector
+textAlign( CENTER, CENTER ); //Align X*Y, see Processing.org / Reference
+//Values: [ LEFT | CENTER | RIGHT ] & [ TOP | CENTER | BOTTOM | BASELINE ]
+titleSize = 50; //Change this number until it fits
+textFont(titleFont, titleSize);
 text(title, titleX, titleY, titleWidth, titleHeight);
 fill(resetDefaultInk);
