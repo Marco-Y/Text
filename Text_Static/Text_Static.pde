@@ -7,10 +7,10 @@ int titleSize;
 //CANVAS
 size (500,600); //Portrait Mode, fits on my display
 //Population
-titleX = width;
-titleY = height;
-titleWidth = width;
-titleHeight = height;
+titleX = width*1/5;
+titleY = height*1/10;
+titleWidth = width*3/5;
+titleHeight = height*1/10;
 //
 //Single Executed Code
 //Fonts rom OS (Operating System)
@@ -30,3 +30,4 @@ titleSize = 50; //Change this number until it fits
 textFont(titleFont, titleSize);
 text(title, titleX, titleY, titleWidth, titleHeight);
 fill(resetDefaultInk);
+//End Program
